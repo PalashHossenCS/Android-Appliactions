@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/toolBarRl"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#1BACFA"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/backBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerVertical="false"
+                    android:background="@null"
+                    android:src="@drawable/ic_back_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="40dp"
+                    android:text="Profile"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/gpsBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="40dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_location_white" />
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolBarRl">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                        android:id="@+id/profilePicId"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        app:c_background_color="@color/white"
+                        app:c_border="true"
+                        app:c_border_color="#BE03A9F4"
+                        app:c_border_width="2.5dp"
+                        app:c_shadow_color="#000"
+                        app:c_shadow_gravity="end"
+                        app:c_shadow_radius="5.5"
+                        android:src="@drawable/ic_baseline_person_black_24"/>
+
+                    <EditText
+                        android:id="@+id/nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/profilePicId"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_person_black_24"
+                        android:drawableLeft="@drawable/ic_baseline_person_black_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName|textCapWords"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/emailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/nameET"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/doBId"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/emailId"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+                        android:drawableLeft="@drawable/ic_baseline_calendar_month_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Date of Birth"
+                        android:inputType="date"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/genderId"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/doBId"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_people_alt_24"
+                        android:drawableLeft="@drawable/ic_baseline_people_alt_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Gender"
+                        android:inputType="textPersonName|textCapWords"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/bloogroupId"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/genderId"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_bloodtype_24"
+                        android:drawableLeft="@drawable/ic_baseline_bloodtype_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Blood Group"
+                        android:inputType="textPersonName|textCapWords"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+
+                    <EditText
+                        android:id="@+id/phoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/bloogroupId"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
+                        android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Phone"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:id="@+id/addressLL"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phoneET"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/countryET"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/nameET"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_rect02"
+                            android:drawableStart="@drawable/ic_baseline_location_on_24"
+                            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                            android:drawablePadding="5dp"
+                            android:hint="Country"
+                            android:inputType="textPostalAddress"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/stateET"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/nameET"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_rect02"
+                            android:drawableStart="@drawable/ic_baseline_location_on_24"
+                            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                            android:drawablePadding="5dp"
+                            android:hint="State"
+                            android:inputType="textPostalAddress"
+                            android:padding="10dp"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/cityET"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/nameET"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_rect02"
+                            android:drawableStart="@drawable/ic_baseline_location_on_24"
+                            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                            android:drawablePadding="5dp"
+                            android:hint="City"
+                            android:inputType="textPostalAddress"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/addressET"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/addressLL"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/shape_rect02"
+                        android:drawableStart="@drawable/ic_baseline_location_on_24"
+                        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                        android:drawablePadding="5dp"
+                        android:hint="Street Name"
+                        android:inputType="textPostalAddress|textMultiLine"
+                        android:padding="10dp" />
+
+                    <Button
+                        android:id="@+id/updateUserBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/addressET"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:minWidth="120dp"
+                        android:text="Update Profile"
+                        android:textSize="15sp"
+                        android:backgroundTint="#0E89C1"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

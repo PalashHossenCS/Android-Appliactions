@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login2"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="374dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/batuphat_script"
+        android:gravity="center"
+        android:text="log in"
+        android:textColor="@color/white"
+        android:textSize="50dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signuptitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#0CA6F8"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#0CA6F8"
+        android:background="#3044F3F3"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="Email"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+
+    <Button
+        android:id="@+id/loginButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="80dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1BACFA"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Log in"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_below="@id/loginButtonId"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/info"
+            android:text="No account?"
+            android:textSize="20sp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/createButtonId"
+            android:text="Create account"
+            android:backgroundTint="#53DFDF"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

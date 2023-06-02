@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/health17"
+    android:backgroundTintMode="add"
+    android:backgroundTint="@color/black"
+    android:gravity="center|bottom"
+    android:weightSum="5"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="474dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="249dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="40dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/chunk_five_print"
+            android:gravity="center"
+            android:text="Healthcare \nApp"
+            android:textColor="#138376"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:layout_width="174dp"
+            android:layout_height="90dp"
+            android:maxWidth="20px"
+            android:maxHeight="10px"
+            android:src="@drawable/appic4_rb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <ProgressBar
+            android:id="@+id/progressBarId"
+            android:layout_width="263dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="90dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/white"
+            android:progressTint="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#283482B6"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/logoId"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="90dp"
+        android:src="@drawable/appic35rb"
+        app:layout_constraintBottom_toTopOf="@+id/titleId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleId"
+        android:layout_width="396dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/batuphat_script"
+        android:gravity="center|center_horizontal"
+        android:text="Better Life"
+        android:textColor="#0389C6"
+        android:textColorHighlight="#77FFFFFF"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoId" />
+
+    <TextView
+        android:id="@+id/sloganId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/librebaskerville_regular"
+        android:text="A healthcare app predicting \nLukemia diseases"
+        android:textAlignment="center"
+        android:textColor="#11668C"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
