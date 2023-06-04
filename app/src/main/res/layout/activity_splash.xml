@@ -24,7 +24,7 @@
         android:id="@+id/titleId"
         android:layout_width="396dp"
         android:layout_height="127dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/batuphat_script"
         android:gravity="center|center_horizontal"
         android:text="Better Life"
@@ -32,6 +32,7 @@
         android:textColorHighlight="#77FFFFFF"
         android:textSize="70sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoId" />
 
