@@ -2,12 +2,15 @@ package com.example.signuplogin;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Homepage extends AppCompatActivity {
 
@@ -27,6 +30,7 @@ public class Homepage extends AppCompatActivity {
         contactus = findViewById(R.id.help);
         logout = findViewById(R.id.logout);
 
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         detection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,9 +62,28 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences mSharedPref;
+                mSharedPref=getSharedPreferences("SharedPref",MODE_PRIVATE);
+                SharedPreferences.Editor editor=mSharedPref.edit();
+                editor.putBoolean("firstTime",true);
+                editor.commit();
+                mAuth.signOut();
+                signOutUser();
+            }
+        });
 
 
 
+    }
+
+    private void signOutUser() {
+        Intent intent=new Intent(Homepage.this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
     }
 
 
