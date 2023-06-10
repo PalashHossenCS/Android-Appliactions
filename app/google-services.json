@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585833519706",
+    "project_id": "animaldetection-c9f13",
+    "storage_bucket": "animaldetection-c9f13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585833519706:android:da0f6b4f2ef967bff0d663",
+        "android_client_info": {
+          "package_name": "com.example.signuplogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585833519706-7un54i9j2hjktgrngignilh4u10sj8hn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2LVhVNUm7WBA-GFRC-cLb3f3fUvJpLKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585833519706-7un54i9j2hjktgrngignilh4u10sj8hn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

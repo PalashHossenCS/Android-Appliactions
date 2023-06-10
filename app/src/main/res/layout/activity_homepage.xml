@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login7"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="374dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="90dp"
+        android:fontFamily="@font/batuphat_script"
+        android:gravity="center"
+        android:text="Find Everything Here"
+        android:textColor="#0271BA"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/Detect"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/signuptitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="           Detect Animal"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <TextView
+        android:id="@+id/Seepost"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/Detect"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="              See Posts"
+        android:textSize="20dp"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <TextView
+        android:id="@+id/WatchVid"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/Seepost"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="           Watch Videos"
+        android:textSize="20dp"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <TextView
+        android:id="@+id/SeeMap"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/WatchVid"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="               Location"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/SeeMap"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:hint="            Contact Us"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/help"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-6dp"
+            android:backgroundTint="#0271BA"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Log Out"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
