@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestApi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="-130dp"
+        >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="0dp">
+            <Button
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:id="@+id/gsapp"
+                android:layout_marginLeft="10dp"
+            android:hint="Gsapp"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"/>
+        <Button
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:id="@+id/sass"
+            android:hint="Sass"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/rating"
+            android:hint="App rating"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/gql"
+            android:hint="Graphql"
+            android:textColorHint="@color/white"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

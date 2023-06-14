@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Homepage extends AppCompatActivity {
 
-    TextView detection, seepost, map, contactus, videos;
+    TextView detection, seepost, map, contactus, videos,help;
     Button logout;
 
 
@@ -29,6 +29,7 @@ public class Homepage extends AppCompatActivity {
         videos = findViewById(R.id.WatchVid);
         contactus = findViewById(R.id.help);
         logout = findViewById(R.id.logout);
+        help =findViewById(R.id.help);
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         detection.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,8 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+
+
         videos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +65,13 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Homepage.this, RestApi.class);
+                startActivity(intent);
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

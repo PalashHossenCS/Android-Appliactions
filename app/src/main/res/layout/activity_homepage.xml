@@ -104,7 +104,7 @@
         android:background="#30ffffff"
         android:drawablePadding="20dp"
         android:fontFamily="@font/quicksand_bold"
-        android:hint="            Contact Us"
+        android:hint="                Rest Api"
         android:inputType="textPassword"
         android:padding="20dp"
         android:textSize="20dp"

@@ -73,5 +73,10 @@ dependencies {
     implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0-rc2'
 
 
+    implementation 'com.eightbitlab:blurview:1.6.6' // Example dependency, replace with your desired SASS library
+    implementation 'org.apache.commons:commons-io:1.3.2' // Required for file operations
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+
+  
 
 }
