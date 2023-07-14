@@ -10,7 +10,7 @@
         android:id="@+id/top_view"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/bg_view" />
+        android:background="@color/purple_500" />
 
 
     <TextView

@@ -2,6 +2,7 @@ package com.example.signuplogin;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -86,6 +87,13 @@ public class LoginActivity extends AppCompatActivity {
                         String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
+
+                        SharedPreferences mSharedPref;
+                        mSharedPref=getSharedPreferences("SharedPref",MODE_PRIVATE);
+                        SharedPreferences.Editor editor=mSharedPref.edit();
+                        editor.putString("userName", userUsername);
+                        editor.commit();
+
                         Intent intent = new Intent(LoginActivity.this, Homepage.class);
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("email", emailFromDB);

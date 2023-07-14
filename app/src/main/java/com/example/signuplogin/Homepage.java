@@ -75,11 +75,18 @@ public class Homepage extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                SharedPreferences mSharedPref;
+//                mSharedPref=getSharedPreferences("SharedPref",MODE_PRIVATE);
+//                SharedPreferences.Editor editor=mSharedPref.edit();
+//                editor.putBoolean("firstTime",true);
+//                editor.commit();
+
                 SharedPreferences mSharedPref;
                 mSharedPref=getSharedPreferences("SharedPref",MODE_PRIVATE);
                 SharedPreferences.Editor editor=mSharedPref.edit();
-                editor.putBoolean("firstTime",true);
+                editor.putString("userName", "null");
                 editor.commit();
+
                 mAuth.signOut();
                 signOutUser();
             }

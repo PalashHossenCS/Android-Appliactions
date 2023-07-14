@@ -72,7 +72,7 @@ public class RestApi extends AppCompatActivity {
     private void makeApiCall() {
         OkHttpClient client = new OkHttpClient();
 
-        String url = "https://www.overleaf.com/login?";
+        String url = "https://www.overleaf.com/login";
 
         Request request = new Request.Builder()
                 .url(url)
@@ -86,8 +86,7 @@ public class RestApi extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            textView.setText("API call successful");
-                            // Use responseData as needed
+                            textView.setText("API call Successful");
                         }
                     });
                 } else {

@@ -10,7 +10,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -52,9 +51,11 @@ public class SplashActivity extends AppCompatActivity {
                 SharedPreferences mSharedPref;
                 mSharedPref=getSharedPreferences("SharedPref",MODE_PRIVATE);
                 boolean isFirstTime=mSharedPref.getBoolean("firstTime",true);
-                Toast.makeText(SplashActivity.this, isFirstTime+"", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(SplashActivity.this, isFirstTime+"", Toast.LENGTH_SHORT).show();
 
-                if(!isFirstTime){
+                String username = mSharedPref.getString("userName", "null");
+
+                if(!username.equals("null")){
                     Intent intent=new Intent(SplashActivity.this,Homepage.class);
                     startActivity(intent);
                     finish();
@@ -66,7 +67,7 @@ public class SplashActivity extends AppCompatActivity {
                     editor.commit();
 
                     isFirstTime=mSharedPref.getBoolean("firstTime",true);
-                    Toast.makeText(SplashActivity.this, isFirstTime+"", Toast.LENGTH_SHORT).show();
+
 
                     Intent intent=new Intent(SplashActivity.this,LoginActivity.class);
                     startActivity(intent);
