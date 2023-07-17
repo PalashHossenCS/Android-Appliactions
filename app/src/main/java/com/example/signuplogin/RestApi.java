@@ -77,7 +77,6 @@ public class RestApi extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url(url)
                 .build();
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {

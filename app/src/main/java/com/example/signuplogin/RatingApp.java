@@ -105,16 +105,20 @@ public class RatingApp extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 double totalRating = 0.0;
                 double count = 0.0;
+                int dount=0;
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                     totalRating += userSnapshot.getValue(double.class);
                     count+=1;
+                    dount+=1;
                 }
 
 
                 DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
 
-                CurrRating.setText("Current Rating :  " + Double.parseDouble(decimalFormat.format(totalRating/count )) );
+
+                CurrRating.setText("Rating : and Number  " + Double.parseDouble(decimalFormat.format(totalRating/count ))+"  "+dount );
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
