@@ -19,7 +19,7 @@ import okhttp3.Response;
 public class RestApi extends AppCompatActivity {
 
     private TextView textView;
-    Button rating,sass,gsapp,graphql;
+    Button rating,sass,gsapp,graphql,restapi;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,11 +33,20 @@ public class RestApi extends AppCompatActivity {
         sass=findViewById(R.id.sass);
         gsapp=findViewById(R.id.gsapp);
         graphql=findViewById(R.id.gql);
+        restapi=findViewById(R.id.restapi);
 
         graphql.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RestApi.this, RestApi.class);
+                startActivity(intent);
+            }
+        });
+
+        restapi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RestApi.this, Yrest.class);
                 startActivity(intent);
             }
         });
@@ -85,7 +94,7 @@ public class RestApi extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            textView.setText("API call Successful");
+                            textView.setText("");
                         }
                     });
                 } else {

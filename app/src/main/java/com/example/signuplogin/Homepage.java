@@ -42,7 +42,7 @@ public class Homepage extends AppCompatActivity {
         seepost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this, PostActivity.class);
+                Intent intent = new Intent(Homepage.this, Social.class);
                 startActivity(intent);
             }
         });
