@@ -124,12 +124,12 @@ public class Post extends AppCompatActivity {
         } else {
             StorageReference ref = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(imageUri));
 
-            storageReference.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            ref.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Toast.makeText(Post.this, "Uploaded", Toast.LENGTH_SHORT).show();
 
-                            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     Upload upload = new Upload(imageName, uri.toString(), username);

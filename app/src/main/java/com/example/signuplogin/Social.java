@@ -2,10 +2,9 @@ package com.example.signuplogin;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
@@ -19,8 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,11 +37,17 @@ public class Social extends AppCompatActivity {
     Boolean testclick = false;
     TextView post;
 
+    SharedPreferences mSharedPref;
+    String username;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_image_review);
+
+        mSharedPref = getSharedPreferences("SharedPref", MODE_PRIVATE);
+        username = mSharedPref.getString("userName", "null");
 
 
         recyclerView = findViewById(R.id.reView);
@@ -55,7 +58,7 @@ public class Social extends AppCompatActivity {
 
 
         uploadList = new ArrayList<>();
-        databaseReference = FirebaseDatabase.getInstance().getReference("upload");
+        databaseReference = FirebaseDatabase.getInstance().getReference("post");
         likeref =  FirebaseDatabase.getInstance().getReference("likes");
 
 
@@ -67,6 +70,8 @@ public class Social extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -75,6 +80,8 @@ public class Social extends AppCompatActivity {
                     Upload upload = datasnap.getValue(Upload.class);
                     uploadList.add(upload);
                 }
+
+                Toast.makeText(Social.this, uploadList.size()+"", Toast.LENGTH_SHORT).show();
 
                 progressBar.setVisibility(View.INVISIBLE);
 
@@ -105,14 +112,14 @@ public class Social extends AppCompatActivity {
                         .fit()
                         .centerCrop()
                         .into(holder.imageView);
-
-                FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                String userId = firebaseUser.getUid();
+//
+//                FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+//                String userId = firebaseUser.getUid();
                 String postkey = getRef(position).getKey();
-
-                holder.getLikeStatus(postkey,userId);
-
-
+//
+                holder.getLikeStatus(postkey,username);
+//
+//
                 holder.likeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -122,12 +129,12 @@ public class Social extends AppCompatActivity {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 if(testclick == true){
-                                    if(snapshot.child(postkey).hasChild(userId)){
-                                        likeref.child(postkey).child(userId).removeValue();
+                                    if(snapshot.child(postkey).hasChild(username)){
+                                        likeref.child(postkey).child(username).removeValue();
                                         testclick = false;
                                     }
                                     else{
-                                        likeref.child(postkey).child(userId).setValue(true);
+                                        likeref.child(postkey).child(username).setValue(true);
                                         testclick = false;
                                     }
                                 }
@@ -140,7 +147,7 @@ public class Social extends AppCompatActivity {
                         });
                     }
                 });
-
+//
                 holder.commentsButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -164,14 +171,16 @@ public class Social extends AppCompatActivity {
 
         firebaseRecyclerAdapter.startListening();
         recyclerView.setAdapter(firebaseRecyclerAdapter);
+
+        //    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater menuInflater = getMenuInflater();
+//        menuInflater.inflate(R.menu.menu_main,menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu_main,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
+
 
 
 }

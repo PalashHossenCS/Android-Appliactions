@@ -1,5 +1,6 @@
 package com.example.signuplogin;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,7 @@ public class CommentPanel extends AppCompatActivity {
     private EditText edtComment;
     private Button submitComment;
     String postkey;
+    SharedPreferences mSharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +62,13 @@ public class CommentPanel extends AppCompatActivity {
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        final String userId = user.getUid();
+        mSharedPref = getSharedPreferences("SharedPref", MODE_PRIVATE);
+        final String userId = mSharedPref.getString("userName", "null");;
 
         submitComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userRef.child(userId).addValueEventListener(new ValueEventListener() {
+                userRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.exists()){
