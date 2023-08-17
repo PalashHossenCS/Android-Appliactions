@@ -2,32 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login7"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RestApi">
-    <View
-        android:id="@+id/top_view"
-        android:layout_width="match_parent"
-        android:layout_height="950dp"
-        android:background="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="374dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="90dp"
+        android:fontFamily="@font/batuphat_script"
+        android:gravity="center"
+        android:text="Get Other Features Here"
+        android:textColor="#0271BA"
+        android:textSize="25dp" />
     <Button
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:id="@+id/rating"
-        android:layout_marginLeft="-50dp"
+        android:layout_marginLeft="0dp"
         android:hint="Rate This App"
+        android:layout_marginTop="150dp"
         android:background="@android:color/transparent"
         android:textColorHint="@color/white"
         android:textColor="#FDFDFC"
         android:textSize="35sp"
         android:textStyle="bold" />
     <Button
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="225dp"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginLeft="-165dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="0dp"
         android:id="@+id/gql"
-        android:hint="  Graphql"
+        android:hint=" Graphql"
         android:background="@android:color/transparent"
         android:textColorHint="@color/white"
         android:textColor="#FDFDFC"
@@ -35,12 +45,12 @@
         android:textStyle="bold" />
     <Button
         android:id="@+id/sass"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="295dp"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginLeft="-218dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="0dp"
         android:background="@android:color/transparent"
-        android:hint="   Sass"
+        android:hint=" Details"
         android:textColorHint="@color/white"
         android:textColor="#FDFDFC"
         android:textSize="35sp"
@@ -49,10 +59,10 @@
     <Button
         android:id="@+id/gsapp"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="390dp"
-        android:layout_marginLeft="-190dp"
-        android:hint="  Gsapp"
+        android:layout_height="100dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="0dp"
+        android:hint=" Photos"
         android:background="@android:color/transparent"
         android:textColorHint="@color/white"
         android:textColor="#FDFDFC"
@@ -61,28 +71,25 @@
     <Button
         android:id="@+id/restapi"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_marginTop="520dp"
-        android:layout_marginLeft="-190dp"
-        android:hint="    RestApi"
+        android:layout_height="100dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="0dp"
+        android:hint="  Temparature"
         android:background="@android:color/transparent"
         android:textColorHint="@color/white"
         android:textColor="#FDFDFC"
         android:textSize="35sp"
         android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="600dp"
-            android:layout_marginLeft="80dp"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            tools:ignore="MissingConstraints" />
-
-
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginLeft="80dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints" />
 
 
 </RelativeLayout>

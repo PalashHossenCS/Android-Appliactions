@@ -7,16 +7,27 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".Social">
-
     <TextView
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:text="Add post"
-        android:id="@+id/post"
-        android:background="@color/purple_500"
-        android:textColor="@color/white"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:text="See posts here"
+        android:background="#EDE9E9"
+        android:textColor="@color/black"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:layout_marginLeft="-52dp"
+        android:textSize="25sp"
+        />
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:text="   Add post"
+        android:id="@+id/post"
+        android:background="#EDE9E9"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="220dp"
+        android:textSize="25sp"
         />
 
 

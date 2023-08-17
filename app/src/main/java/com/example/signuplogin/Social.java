@@ -131,10 +131,12 @@ public class Social extends AppCompatActivity {
                                 if(testclick == true){
                                     if(snapshot.child(postkey).hasChild(username)){
                                         likeref.child(postkey).child(username).removeValue();
+
                                         testclick = false;
                                     }
                                     else{
                                         likeref.child(postkey).child(username).setValue(true);
+
                                         testclick = false;
                                     }
                                 }

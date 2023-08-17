@@ -43,7 +43,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder{
                 else{
                     int total_Like = (int) snapshot.child(postkey).getChildrenCount();
                     likeCount.setText(total_Like+"likes");
-                    likeButton.setImageResource(R.drawable.ic_person_gray);
+                    likeButton.setImageResource(R.drawable.baseline_thumb_up_off_alt_24);
                 }
             }
 

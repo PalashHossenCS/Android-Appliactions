@@ -64,13 +64,28 @@ public class SignupActivity extends AppCompatActivity implements TextWatcher {
                 String username = signupUsername.getText().toString();
                 String password = signupPassword.getText().toString();
                 String dateOfBirth = editDate.getText().toString();
-
-                HelperClass helperClass = new HelperClass(name, email, username, password, dateOfBirth);
-                reference.child(username).setValue(helperClass);
-                Toast.makeText(SignupActivity.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                startActivity(intent);
+                if (isValidEmail(email)) {
+                    HelperClass helperClass = new HelperClass(name, email, username, password, dateOfBirth);
+                    reference.child(username).setValue(helperClass);
+                    Toast.makeText(SignupActivity.this, "You have signed up successfully!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(SignupActivity.this, "Invalid email address", Toast.LENGTH_SHORT).show();
+                }
+//                HelperClass helperClass = new HelperClass(name, email, username, password, dateOfBirth);
+//                reference.child(username).setValue(helperClass);
+//                Toast.makeText(SignupActivity.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+//                startActivity(intent);
             }
+
+            private boolean isValidEmail(String email) {
+                String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+                return email.matches(regex);
+            }
+
+
         });
 
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
