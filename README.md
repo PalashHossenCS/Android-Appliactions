@@ -1,8 +1,9 @@
 Android Project: [Animal Detection App]
-1. Overview:
+
+Overview:
 -This project was developed using Android Studio, with the primary technologies of Java, XML, and Firebase. Below is an outline of the key features and requirements implemented in the app, designed to meet both academic and practical objectives.
 
-2. Features Implemented
+Features Implemented
 
 -Realtime Commenting: Comments can be posted and displayed dynamically without reloading the app, similar to Facebook's functionality.
 
